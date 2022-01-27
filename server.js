@@ -23,7 +23,7 @@ fs.readFile('./www/index.html', 'utf8',(err,data) => {
         if(err){
             console.error(err)
             return
-            process.exitCode(1)
+            process.exit(1)
     }
 
 // The function must read a file located at `./www/index.html` and do some stuff with it.
@@ -52,7 +52,8 @@ const server = http.createServer((req, res) => {
 // Put the exact message `Server listening on port ${port}` on the console log. 
 
 server.listen(port, () => {
-console.log('Server listening on port ${port}')
+console.log(`Server listening on port ${port}`)
 })
-})
+
 // That's it! You're all done!
+})
